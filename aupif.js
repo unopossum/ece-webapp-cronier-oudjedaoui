@@ -3,18 +3,31 @@ const app = express()
 const port = 8080
 const database = require('./db.js')
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+app
+  .get('/', (req, res) => {
+      res.send('Hello World!')
+  })
 
-app.get('/hello', (req, res) => {
-  res.send('Hello buddy !')
-})
+  .get('/hello', (req, res) => {
+    res.send('Hello buddy !')
+  })
 
-app.get('/hello/:name', (req, res) => {
-  res.send("Hello " + req.params.name)
-})
+  .get('/hello/:name', (req, res) => {
+    res.send("Hello " + req.params.name)
+  })
 
+app
+  .post('/', (req, res) => {
+    // post
+  })
+
+  .delete('/', (req, res) => {
+    // delete
+  })
+
+  .put('/', (req ,res) => {
+    // put
+  })
 
 app.get('/articles', (req, res) => {
   const searchId = '6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'

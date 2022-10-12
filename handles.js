@@ -1,9 +1,21 @@
-const url = require('url')
-const qs = require('querystring')
-let aboutus = require('./content/about.json')
-const { resolveSoa } = require('dns')
-const { fstat } = require('fs')
+const aboutus = require('./content/about.json')
+const express = require('express')
+const fs = require('fs')
+const router = express.Router()
+const db = require('./db.js')
 
+router.get('/hello', (req, res) => {
+    res.writeHead(300, {'Content-Type': 'text/html'})
+    res.end("Hello !")
+})
+
+router.get('/hello/:name', (req, res) => {
+    res.writeHead(300, {'Content-Type': 'text/html'})
+    res.end("Hello "+ req.params.name)
+})
+
+
+/*
 module.exports = {
     serverHandle: function (req, res) {
         const route = url.parse(req.url)
@@ -41,6 +53,11 @@ function callback(err, jsonString) {
     console.log(typeof aboutus)
     res.write(JSON.stringify(aboutus))
 }
+
+*/
+module.exports = router
+
+
 
 
 
