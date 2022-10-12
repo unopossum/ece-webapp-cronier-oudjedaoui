@@ -14,9 +14,28 @@ router.get('/hello/:name', (req, res) => {
     res.end("Hello "+ req.params.name)
 })
 
+router.get('/articles', (req, res) => {
+    const searchId = '6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'
+    const article = database.db.article.find(article => article.id === searchId)
+    res.send(""+article.title)
+  })
 
+router.get('/about', (req, res) => {
+    /*
+    fs.readFile('./content/about.json', 'utf8', (err, jsonString) => {
+        if (err) {
+            console.log("Error", err)
+            return
+        }
+        aboutus = JSON.parse(jsonString)
+        res.send(aboutus)
+    })*/
+    res.end(JSON.stringify(aboutus))
+    
+})
+
+  
 module.exports = router;
-
 
 
 
