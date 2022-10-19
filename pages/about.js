@@ -9,7 +9,7 @@ export default function About() {
                 About us 
             </h2>
             <p>
-                This project is being made by Timothée Cronier and Sami
+                This project is being made by Timothée Cronier and Sami. We are students at ECE Paris
             </p>
         </div>
     )

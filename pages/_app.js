@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
         </Link>
       </ul>
       <footer>
-        Timothée Cronier & Sami
+        Timothée Cronier and Sami
       </footer>
     </div>
   )
