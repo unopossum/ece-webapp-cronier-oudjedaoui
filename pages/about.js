@@ -1,6 +1,5 @@
 // pages/about.js
 
-import React from "react";
 
 export default function About() {
     return (
@@ -9,7 +8,7 @@ export default function About() {
                 About us 
             </h2>
             <p>
-                This project is being made by Timothée Cronier and Sami. We are students at ECE Paris
+                <a class="anim-underline-fx" href='#0'>This project is being made by Timothée Cronier and Sami. We are students at ECE Paris</a>
             </p>
         </div>
     )
