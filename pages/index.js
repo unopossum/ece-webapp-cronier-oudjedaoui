@@ -1,64 +1,41 @@
-function HomePage() {
-    return <div>Welcome to Next.js!</div>
-}
-
-function Welcome(props) {
-    return <h1> Welcome, {props.name} </h1>
-}
-
-function formatDate(date) {
-    return date.toLocaleDateString();
-}
-
-function Avatar(props) {
-    return (
-      <img className="Avatar"
-           src={props.user.avatarUrl}
-           alt={props.user.name} />
-    );
-}
-
-function UserInfo(props) {
-    return (
-      <div className="UserInfo">
-        <Avatar user={props.user} />
-        <div className="UserInfo-name">
-          {props.user.name}
+export default function Home() {
+  return (
+    <div>
+      <head>
+        <title>PROJECT</title>
+      </head>
+      <body>
+        <div id="headerbanner">PUNCHOLOGUE</div>
+        <div id="introtext">
+          Punchologue est un média rap, traitant toute l'actualité dans le
+          milieu du rap français / US{" "}
         </div>
-      </div>
-    );
+        <div id="mainbox" class="clearfix">
+          <div class="box">
+            BOX 1 <img src="../download.png"></img>{" "}
+          </div>
+          <div class="box">BOX 2</div>
+          <div class="box">
+            BOX 3 <button class="btn_gradient">wehs alors </button>
+          </div>
+        </div>
+      </body>
+    </div>
+  );
 }
 
-function Comment(props) {
-    return (
-      <div className="Comment">
-        <UserInfo user={props.author} />
-        <div className="Comment-text">
-          {props.text}
+/*
+<div>
+      <head>
+        <title>Project - HOME</title>
+      </head>
+      <body>
+        <div>
+          <h2 className="text-3xl font-bold underline">
+            PROJECT
+          </h2>
+          <br/>
+          <a class="anim-underline-fx" href="#0"> aleykoum salam </a> 
         </div>
-        <div className="Comment-date">
-          {formatDate(props.date)}
-        </div>
-      </div>
-    );
-}
-
-const comment = {
-    date: new Date(),
-    text: 'I hope you enjoy learning React!',
-    author: {
-      name: 'Hello Kitty',
-      avatarUrl: 'http://placekitten.com/g/64/64'
-    }
-};
-  
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <Comment
-        date={comment.date}
-        text={comment.text}
-        author={comment.author} />
-);
-
-
-export default HomePage
+      </body>
+    </div> */
